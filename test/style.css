@@ -1,0 +1,41 @@
+* {
+	border: 0;
+	margin: 0;
+}
+
+#mask {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:9000;
+	background-color:#000;
+	display:none;
+}
+  
+#boxes .window {
+	position:absolute;
+	left:0;
+	top:0;
+	width:600px;
+	height:300px;
+	display:none;
+	z-index:9999;
+	padding:0px;
+}
+
+#boxes #teams {
+	width:600px; 
+	height:300px;
+	background: #fff;
+}
+
+#teams .d-header {
+	width: 600px;
+	height:40px;
+	border-bottom: 1px #000000;
+	border-style:solid;
+	background: #000000 url(images/invis.png);
+}
+
+
+

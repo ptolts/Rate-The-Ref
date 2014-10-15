@@ -1,0 +1,25 @@
+<?php
+
+include('simple_html_dom.php');
+
+
+$useragent = "Mozilla/5.0 (iPhone; CPU iPhone OS 5_0_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A405";
+$curl = curl_init(); 
+curl_setopt($curl, CURLOPT_USERAGENT, $useragent);
+curl_setopt($curl, CURLOPT_URL, 'http://www.nhl.com/ice/m_scores.htm');  
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);  
+curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 10);  
+curl_setopt($curl, CURLOPT_HTTPPROXYTUNNEL, 1);
+curl_setopt($curl, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
+curl_setopt($curl, CURLOPT_PROXY, '127.0.0.1:9050'); 
+//curl_setopt($curl, CURLOPT_HTTPHEADER, array("User-Agent: ".$useragent)); 
+//$str = curl_exec($curl);  
+curl_close($curl);  
+ 
+//echo $str;
+
+print_r($_SERVER);
+
+//$html= str_get_html($str); 
+
+?>
